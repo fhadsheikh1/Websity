@@ -1,0 +1,42 @@
+#ajax-box {
+    @include transition-property(transform, opacity);
+    @include transition-duration(.6s, .6s);
+    @include transition-timing-function(ease-out, ease);
+
+    &.translate.enter {
+        will-change: transform, opacity;
+        @include transform(translate3d(0, 0, 0));
+        opacity: 1;
+    }
+
+    &.translate {
+        will-change: transform, opacity;
+        @include transform(translate3d(0, 50%, 0));
+        opacity: 0;
+    }
+
+    .parallax img {
+        @include transform(translateX(-50%));
+    }
+
+    #close-ajax {
+        position: absolute;
+        z-index: 8888;
+        top: .75rem;
+        left: .75rem;
+    }
+
+    .padding-text {
+        padding: 1rem;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+
+        @media #{$small-and-down} {
+            font-size: 36px;
+            letter-spacing: 3px;
+        }
+    }
+}

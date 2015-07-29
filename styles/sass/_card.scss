@@ -1,0 +1,59 @@
+.card {
+    opacity: 0;
+    @include transform(translate3d(0, 150px, 0));
+    @include transition(all .4s $ease-out-circ);
+
+    &.animate {
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0));
+    }
+
+    &:hover {
+        $shadow: 0 16px 28px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21);
+        @include prefixer(box-shadow, $shadow, webkit moz spec);
+
+        a.btn-floating {
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+
+    &.active {
+        a.btn-floating {
+            visibility: hidden;
+        }
+    }
+
+    a, i {
+        color: $primary-color;
+        text-transform: none;
+
+        &:hover {
+            color: lighten($primary-color, 20%);
+        }
+    }
+
+    a.btn-floating {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        @include transition(all .2s $ease-out-circ);
+        @include transform(translate3d(0, 200px, 0));
+    }
+
+    .card-image img {
+        display: block;
+    }
+
+    .card-date {
+        color: #9e9e9e;
+    }
+
+    .card-reveal {
+        background: transparentize($white, .2);
+    }
+
+    .card-title {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}

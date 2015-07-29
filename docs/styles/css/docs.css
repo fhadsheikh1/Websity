@@ -1,0 +1,26 @@
+nav {
+  background-color: white;
+  color: black; }
+  nav a,
+  nav .brand-logo {
+    color: black; }
+  nav #pi {
+    left: -0.75rem;
+    position: relative; }
+    nav #pi img {
+      height: 56px;
+      display: block; }
+      @media only screen and (min-width: 601px) {
+        nav #pi img {
+          height: 64px; } }
+
+.fixed-box {
+  position: fixed; }
+
+p,
+ul li,
+blockquote,
+cite {
+  font-size: 16px; }
+
+/*# sourceMappingURL=docs.css.map */

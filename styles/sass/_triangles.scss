@@ -1,0 +1,41 @@
+#triangles {
+    height: 600px;
+
+    .h1-wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        h1 {
+            text-align: center;
+            font-weight: 200;
+            font-size: 3rem;
+            line-height: 3.92rem;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+
+            @media #{$medium-only} {
+                font-size: 4.5rem;
+                line-height: 4.7rem;
+            }
+
+            @media #{$large-and-up} {
+                font-size: 7.0rem;
+                line-height: 7.4rem;
+            }
+        }
+
+        i {
+            @include transform(rotate(90deg));
+        }
+
+        color: $white;
+    }
+
+    #explore {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        margin-left: -27.75px;
+    }
+}

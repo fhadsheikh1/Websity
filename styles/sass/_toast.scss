@@ -1,0 +1,26 @@
+@media only screen and (max-width: 992px) and (min-width: 601px) {
+    #toast-container {
+        right: 5%;
+    }
+}
+
+.toast {
+    height: auto;
+    line-height: 1.75rem;
+    padding: 20px;
+
+    a {
+        display: block;
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.toast.error {
+    background-color: $error;
+}
+
+.toast.success {
+    background-color: $success;
+    color: $black;
+}

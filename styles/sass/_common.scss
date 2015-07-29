@@ -1,0 +1,93 @@
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+a {
+    color: $primary-color;
+    @include transition(color .3s ease);
+
+    &:hover {
+        color: lighten($primary-color, 20%);
+    }
+
+    &[role=button] {
+        cursor: pointer;
+    }
+}
+
+.responsive-img {
+    display: block;
+}
+
+.container {
+    max-width: 1700px;
+    width: 90%;
+
+    @media #{$medium-and-up} {
+        width: 90%;
+    }
+
+    @media #{$large-and-up} {
+        width: 90%;
+    }
+}
+
+.wide-container {
+    padding: 0 .75rem;
+}
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &.grey-section {
+        background: $extra-light-gray;
+    }
+}
+
+h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 110%;
+    letter-spacing: 5px;
+
+    @media #{$small-and-down} {
+        font-size: 46px;
+        letter-spacing: 3px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 100px;
+        height: 5px;
+        margin-left: -50px;
+        margin-top: 35px;
+        background-color: $secondary-color;
+    }
+}
+
+@media #{$medium-and-up} {
+    .right-on-med-and-up {
+        float: right;
+    }
+}
+
+.social i {
+    margin: 0 .25rem;
+}
+
+blockquote {
+    border-left: 5px solid $secondary-color;
+}
+
+.waves-effect.waves-secondary-color .waves-ripple {
+    background-color: $secondary-color;
+
+}

@@ -1,0 +1,42 @@
+.services {
+    margin-top: 3rem;
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 3px;
+    }
+
+    .col {
+        text-align: center;
+        font-size: 16px;
+
+        @media #{$medium-and-down} {
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            margin: 15px 0;
+            @include transition(background-color .3s ease);
+        }
+
+        p {
+            font-weight: 300;
+
+            @media #{$medium-only} {
+                margin: 0 auto 20px;
+                max-width: 300px;
+            }
+        }
+
+        &:hover {
+            .divider {
+                background-color: $primary-color;
+            }
+        }
+
+        i {
+            color: $primary-color;
+        }
+    }
+}

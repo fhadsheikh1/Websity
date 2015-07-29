@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Hide the browser UI -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#69f0ae">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+
+    <!-- Android toolbar color -->
+    <meta name="theme-color" content="#69f0ae">
+
+    <!-- Apple touch icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+
+    <!-- Android touch icons -->
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+
+    <!-- Web app manifest file -->
+    <link rel="manifest" href="favicons/manifest.json">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="libs/materialize/css/materialize.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css/wata.css">
+    
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+    <!-- Site title -->
+    <title>Websity</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- The preloader we see before the whole site is loaded -->
+        <div id="preloader" class="valign-wrapper">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only actually-black">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- A status spinner to indicate that some process is going on -->
+        <div id="status">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-blue-only actually-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation bar -->
+        <div class="navbar-fixed" id="nav">
+            <nav>
+                <div class="nav-wrapper">
+
+                    <!-- Site name -->
+                    <a href="/" class="brand-logo"><span class="tighter">W</span>ebsity</a>
+
+                    <!-- Mobile menu button -->
+                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+                    <!-- Static menu -->
+                    <ul class="right hide-on-med-and-down table-of-contents">
+                        <li><a href="#triangles">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#prices">Prices</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <!-- Mobile menu, make sure it is equal to the statis menu -->
+                    <ul class="side-nav" id="mobile-menu">
+                        <li><a href="#triangles">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#prices">Prices</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Triangles section -->
+        <div id="triangles" class="scrollspy">
+            <div id="output">
+                <div class="h1-wrapper valign-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <!-- Your company's slogan, feel free to add more tags here -->
+                                <h1>Pushing the boundaries of great web design.</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action button -->
+                    <a class="btn-floating btn-large waves-effect waves-dark green accent-2" id="explore">
+                        <i class="mdi-navigation-arrow-forward indigo-text text-darken-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services section -->
+        <div class="section scrollspy" id="services">
+            <div class="container">
+                <div class="row">
+                    <h2>Welcome to Websity</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            A professional Canadian based web development firm <br> looking forward to taking your online presence to the next level
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Row with service icons -->
+                <div class="row services">
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-paint-brush"></i>
+                        <div class="divider"></div>
+                        <h5>Web Design<br>& Development</h5>
+                        <p>We design beautiful websites that drive your business forward. We can help you create your first website or update your current one.</p>
+                    </div>
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-mobile "></i>
+                        <div class="divider"></div>
+                        <h5><span style="text-transform:lowercase">i</span>OS & Android<br>Appications</h5>
+                        <p>Be more accessible to your clients through smartphone applications. Go beyond a static web page to allow users to interact with dynamic content.</p>
+                    </div>
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-cloud  "></i>
+                        <div class="divider"></div>
+                        <h5>Custom<br>Applications</h5>
+                        <p>Make your website work for you. We can create custom content management systems to help you track customers and more.</p>
+                    </div>
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-bullseye "></i>
+                        <div class="divider"></div>
+                        <h5>Online SEO<br>& Marketing</h5>
+                        <p>Let us help you build an online marketing campaign so you can be seen. All purchases include advanced analytics so you can keep track of it all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get started section -->
+        <div class="section scrollspy grey-section city" id="features">
+            <div class="container">
+                <div class="row">
+                    
+                    <h2><span>It's a jungle out there</span></h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            <span>Let's start building your next project together. View our <a href="#prices">prices</a> below or contact us for custom requests.</span>
+                        </p>
+                        <p class="center-align">
+                            <a href="#contact" class="waves-effect waves-light btn-large green accent-2 indigo-text text-darken-4">
+                                <i class="fa fa-rocket left"></i>Get started
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                    </div>
+        </div>
+
+        <!-- Works section -->
+        <div class="section scrollspy" id="works">
+            <div class="container">
+                <div class="row">
+                    <h2>Sample Work</h2>
+                    <!-- Category filter buttons -->
+                    <div class="filter-options">
+                        <a class="btn-flat waves-green-accent waves-effect active" id="all" data-group="all">Everything</a>
+                        <a class="btn-flat waves-green-accent waves-effect" data-group="Service">Service</a>
+                        <a class="btn-flat waves-green-accent waves-effect" data-group="Online Store">Online Store</a>
+                        <a class="btn-flat waves-green-accent waves-effect" data-group="Blog">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wide-container">
+                <!-- Shuffle grid -->
+                <div id="shuffle-grid" class="row">
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Online Store"]'>
+                        <img src="images/works/furnitureshop.png" class="responsive-img" alt="Ice cream">
+                        <h5>Furniture Shop</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Online Store"]'>
+                        <img src="images/works/restaurant1.png" class="responsive-img" alt="Ice cream">
+                        <h5>Restaurant</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Online Store"]'>
+                        <img src="images/works/toyshop.png" class="responsive-img" alt="Ice cream">
+                        <h5>Toy Store</h5>
+                    </div>
+<div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Online Store"]'>
+                        <img src="images/works/trucking.png" class="responsive-img" alt="Ice cream">
+                        <h5>Trucking</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Service"]'>
+                        <img src="images/works/cleaning.png" class="responsive-img" alt="Ice cream">
+                        <h5>Cleaning</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Service"]'>
+                        <img src="images/works/construction.png" class="responsive-img" alt="Ice cream">
+                        <h5>Construction</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Service"]'>
+                        <img src="images/works/legal.png" class="responsive-img" alt="Ice cream">
+                        <h5>Legal</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Service"]'>
+                        <img src="images/works/moving.png" class="responsive-img" alt="Ice cream">
+                        <h5>Moving</h5>
+                    </div>
+                    <div href="#" class="col s12 m6 l4 picture-item ajax-link" data-groups='["Service"]'>
+                        <img src="images/works/tax.png" class="responsive-img" alt="Ice cream">
+                        <h5>Accounting</h5>
+                    </div>
+                                        
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Prices section -->
+        <div class="section scrollspy" id="prices">
+            <div class="container">
+                <div class="row">
+                    <h2>Prices</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Browse between a standard, professional and extended bundle versions.
+                            We've got your next project covered.
+                        </p>
+                    </div>
+                    <div class="col s12">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="price-container z-depth-1" id="standard">
+                            <div class="offer">Standard</div>
+                            <div class="divider"></div>
+                            <div class="price">$299</div>
+                            <ul>
+                                <li>5 Pages</li>
+                                <li>Mobile-Friendly Design</li>
+                                <li>Contact Form</li>
+                                <li>Management Portal</li>
+                                <li>Custom Email Address</li>
+                                <li>Newsletter List</li>
+                                <li>Social Media Integrations</li>
+                                <li><span style="color:white">-</span></li>
+                                <li><span style="color:white">-</span></li>
+                            </ul>
+                            <a class="waves-effect waves-dark white black-text btn">Choose</a>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="price-container z-depth-1 best-offer" id="professional">
+                            <div class="offer best-value">Professional</div>
+                            <div class="divider"></div>
+                            <div class="price">$499</div>
+                            <ul>
+                                <li>Standard Features plus:</li>
+                                <li>10 Pages</li>
+                                <li>Blog Posts</li>
+                                <li>Image Gallery</li>
+                                <li>Advanced Analytics</li>
+                                <li>Custom Email Address</li>
+                                <li>Free Domain Name</li>
+                                <li>Blog Posts</li>
+                                <li><span style="color:white">-</span></li>
+                            </ul>
+                            <a class="waves-effect waves-light green accent-2 indigo-text text-darken-4 btn">Choose</a>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="price-container z-depth-1" id="extended">
+                            <div class="offer">Extended</div>
+                            <div class="divider"></div>
+                            <div class="price">$1499</div>
+                            <ul>
+                                <li>Standard & Professional plus:</li>
+                                <li>Free Hosting for 1 Year</li>
+                                <li>Online Shop w/ Management</li>
+                                <li>SEO & Online Marketing</li>
+                                <li>Content Writing</li>
+                                <li>Customer Database</li>
+                                <li>10 Hours of Custom Work</li>
+                                <li>24 Hour Support</li>
+                                
+                                <li><span style="color:white">-</span></li>
+                            </ul>
+                            <a class="waves-effect waves-dark white black-text btn">Choose</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscribe section -->
+        <div class="section grey-section scrollspy subscribe" id="subscribe">
+            <div class="container">
+                <div class="row">
+                    <h2><span class="formbg">Subscribe</span></h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            <span class="formbg">Don't miss our offers and receive some pro tips. We promise we won't spam you, unsubscribe
+                                anytime you want.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s8 offset-s2">
+                        <!-- Begin MailChimp Signup Form -->
+                        <div id="mc_embed_signup">
+                            <form action="//pimmey.us11.list-manage.com/subscribe/post?u=4131d254e34d85ebd3ba25ad3&amp;id=302b5221bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+                               <span class="formbg"> <div id="mc_embed_signup_scroll" class="input-field">
+                                    <label for="mce-EMAIL">Your email</label>
+                                    <input type="email" name="EMAIL" class="email" id="mce-EMAIL" required>
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->                                    
+                                    <div class="cant-touch-this">
+                                        <input type="text" name="b_4131d254e34d85ebd3ba25ad3_302b5221bd" tabindex="-1" value="">
+                                    </div>
+                                    <div class="clear center-align">
+                                        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="waves-effect waves-light btn-large green accent-2 indigo-text text-darken-4"></span>
+                                            <i class="fa fa-paper-plane left"></i>Subscribe
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--End mc_embed_signup-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Contact form section -->
+                    <div class="contact">
+        <div class="section scrollspy" id="contact">
+
+            <div class="container">
+                
+                <div class="row">
+                    
+                    <h2><span class="formbg">Contact us</span></h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            <span class="formbg">Let us know if you want to work on your project with us or just drop a line to say hello. We're
+                            always glad to receive your messages.
+                            </span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            <div class="hide"><div class="map"><div id="map-canvas"></div></div></div>
+            <div class="formbg"> 
+                <div class="row">
+                    <form class="col s12 m12 l8 offset-l2" action="php/mailer.php" id="contact-form" novalidate>
+                        <!-- This field helps us avoid spam bots, don't remove it -->
+                        <div class="cant-touch-this">
+                            <input type="text" name="hammertime" tabindex="-1" value="">
+                        </div>
+                        <!-- End of anti-spam field -->
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first-name" name="first-name" type="text" class="required">
+                                <label for="first-name">First name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last-name" name="last-name" type="text">
+                                <label for="last-name">Last name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" name="email" type="email" class="required">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="message" name="message" class="materialize-textarea required"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="center-align">
+                            <button type="submit" name="send" class="btn-large disabled">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            <div class="container contact-details">
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <h5>Serving</h5>
+                        <div class="divider"></div>
+                        <address>
+                            Toronto<br>
+                            Mississauga<br>
+                            Montreal<br>
+                            Vancouver
+                        </address>
+                    </div>
+                    <div class="col s12 m6 l6">
+                        <h5>Reach us</h5>
+                        <div class="divider"></div>
+                        <p>
+                            +1-647-504-4442<br>
+                            <a href="mailto:info@websity.ca">info@websity.ca</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer section -->
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2015 Websity | <a href="ajax/pages/privacy-policy.html" class="ajax-link">Privacy policy</a>
+
+                    <!-- Social icons -->
+                    <span class="social right">
+                        <a href="#!"><i class="fa fa-facebook"></i></a>
+                        <a href="#!"><i class="fa fa-vk"></i></a>
+                        <a href="#!"><i class="fa fa-google-plus"></i></a>
+                        <a href="#!"><i class="fa fa-github"></i></a>
+                        <a href="#!"><i class="fa fa-deviantart"></i></a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Ajax box container, waiting for its turn -->
+    <div id="ajax-box" class="translate"></div>
+
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/build.js"></script>
+</body>
+</html>

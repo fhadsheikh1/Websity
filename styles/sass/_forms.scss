@@ -1,0 +1,47 @@
+// Subscribe
+#subscribe {
+    button {
+        margin-top: 2rem;
+
+        i {
+            @media #{$small-and-down} {
+                display: none;
+            }
+        }
+    }
+
+    input.error {
+        border-bottom: 1px solid $error;
+        box-shadow: 0 1px 0 0 $error;
+    }
+}
+
+input[type=email]:focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: $secondary-color;
+}
+
+input[type=email]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $secondary-color;
+    box-shadow: 0 1px 0 0 $secondary-color;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    background-color: white !important;
+}
+
+.cant-touch-this {
+    position: absolute;
+    left: -5000px;
+}
+
+// Contact
+#contact {
+    .modern-connect i {
+        width: 1.2rem;
+    }
+}

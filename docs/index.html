@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <link rel="stylesheet" href="../libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/prism/prism.css">
+    <link rel="stylesheet" href="styles/css/docs.css">
+    <title>Wata documentation</title>
+</head>
+<body>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <div class="container"></div>
+                <div class="row">
+                    <div class="col s3">
+                        <a href="http://themeforest.net/user/pimmey" id="pi">
+                            <img src="images/pi.png">
+                        </a>
+                    </div>
+                    <div class="col s9">
+                        <span>
+                            Wata documentation <small>v1.0</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+
+        <div class="col s3">
+            &nbsp;
+            <div class="fixed-box">
+                <ul class="section table-of-contents">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#requirements">Requirements</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#sass">Sass</a></li>
+                    <li><a href="#grunt">Grunt</a></li>
+                    <li><a href="#triangles">Triangles</a></li>
+                    <li><a href="#services-icons">Service icons</a></li>
+                    <li><a href="#works-filters">Works filters</a></li>
+                    <li><a href="#ajax-box">Ajax box</a></li>
+                    <li><a href="#currency-switcher">Currency switcher</a></li>
+                    <li><a href="#subscribe-form">Subscribe form</a></li>
+                    <li><a href="#blog-posts">Blog posts</a></li>
+                    <li><a href="#contact-form">Contact form</a></li>
+                    <li><a href="#google-map">Google map</a></li>
+                    <li><a href="#skype-link">Skype link</a></li>
+                    <li><a href="#touch-icons">Touch icons</a></li>
+                    <li><a href="#credits">Credits</a></li>
+                </ul>
+                <a href="http://themeforest.net/user/pimmey#contact"><i class="fa fa-support"></i> Contact me</a>
+            </div>
+        </div>
+
+        <div class="col s9">
+
+            <div class="section scrollspy" id="introduction">
+                <h2>Introduction</h2>
+                <p>
+                    Welcome and thank you for purchasing our theme Wata. We prepared a throughout documentation to make
+                    your experience as pleasant as possible. We tried to cover every aspect of this theme, however,
+                    if you still have any questions or need clarification, feel free to email us via
+                    <a href="http://themeforest.net/user/pimmey#contact"><i class="fa fa-support"></i> user page contact form</a>.
+                </p>
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        This theme is built using <a href="http://materializecss.com/">Materialize</a>,
+                        a modern responsive front-end framework based on Material Design. Make sure
+                        you visit their web-site to learn more about it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="requirements">
+                <h2>Requirements</h2>
+                <p>
+                    This theme requires a pretty basic setup. In fact, the only thing your server needs is PHP installed,
+                    which is usually 99.9% of the cases. If you happend to be that 0.1%, please contact your hosting
+                    administrator and let him know you need PHP installed on your server.
+                </p>
+                <p>
+                    Wata works great in all of the modern browsers, as well as mobile browsers. It supports Internet Explorer 10+.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="installation">
+                <h2>Installation</h2>
+                <p>
+                    Installing our theme is extremely simple &mdash; just upload all the files to your server. In fact,
+                    you can test your theme locally as well, except for the <a href="#contact-form">contact form</a>
+                    functionality, which requires a server side language.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="sass">
+                <h2>Sass</h2>
+                <blockquote>
+                    Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+                    <br><cite><a href="http://sass-lang.com/">sass-lang.com</a></cite>
+                </blockquote>
+                <p>
+                    Using Sass is optional, so don't worry about this section in case you prefer pure CSS.
+                </p>
+                <p>
+                    Wata's styles have been written using Sass with help of <a href="http://bourbon.io/">Bourbon</a> library.
+                    Make sure you take full advantage of it, if you are familiar with this technology. The main file
+                    <code>styles/sass/wata.scss</code> contains imports of various components. All components are very specific, making
+                    it very simply to maintain the code.
+                </p>
+                <p>
+                    Sass allows you to modify the whole color-scheme by changing only two variables. In the
+                    <code>styles/sass/_colors.scss</code> file we define <code class="language-scss">$primary-color</code>
+                    and <code class="language-scss">$secondary-color</code> which are then being used by the whole
+                    style sheet. There, you can adjust other colors as well.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="grunt">
+                <h2>Grunt</h2>
+                <p>
+                    Grunt is the JavaScript Task Runner. The usage of this technology is also optional.
+                </p>
+                <p>
+                    You can use it to minify your CSS, JavaScript and concatenate files into one big build, which would
+                    shorten the http requests the browser has to make, thus making the page load faster. If you're not
+                    familiar with Grunt, but want to give it a try, check out the
+                    <a href="http://gruntjs.com/getting-started">Getting started with Grunt</a> guide.
+                </p>
+                <h4>Using the tasks</h4>
+                <p>
+                    At first, you have to install the dependencies.
+                </p>
+<pre class="language-markup">
+<code>npm install</code>
+</pre>
+                <p>The tasks are:</p>
+                <ul>
+                    <li><code class="language-markup">grunt</code> (default) &mdash; minify CSS and JavaScript</li>
+                    <li><code class="language-markup">grunt build_lib</code> &mdash; build a single file with the entire
+                        library</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="triangles">
+                <h2>Triangles</h2>
+                <p>
+                    We like flashy effects, they help memorize your web-site. Triangles use a WebGL animation, falling
+                    back to HTML canvas, which ensures cross-browser compatibility.
+                </p>
+                <h4>Customizing the colors</h4>
+                <p>
+                    By default, the colors correspond to the primary and secondary colors of Wata's color scheme, but
+                    you can customize them to suit your needs. You will need to open the <code>scripts/config.js</code>
+                    file and edit the following lines to achieve that:
+                </p>
+<pre class="language-javascript">
+<code>var Wata = {
+
+    // Configuration of triangles
+    triangles: {
+        mesh: {
+            depth: 11,
+            slices: 250
+        },
+        light: {
+            ambient: '#5838e6',
+            diffuse: '#4efa62',
+            distance: 55
+        }
+    },
+...</code>
+</pre>
+                <p>
+                    You can use this page to help you with this process &mdash;
+                    <a href="http://msurguy.github.io/triangles/">msurguy.github.io/triangles</a>.
+                    Just copy and paste the values from the UI into the configuration variable.
+                </p>
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        Make sure you follow the correct syntax for this one, it might be a little tricky. The number
+                        doesn't need any quotes &mdash; <code class="language-javascript">250</code>, while the color
+                        code does &mdash; <code class="language-javascript">'#5838e6'</code>.
+                    </p>
+                    <p>
+                        Also, you shouldn't leave a trailing comma, that is the latest value of the group, such as
+                        <code class="language-javascript">slices</code> or <code class="language-javascript">distance</code> don't need a comma at the end.
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="services-icons">
+                <h2>Services icons</h2>
+                <p>
+                    Services icons' color is animated by GreenSock. As you scroll through the <code>#services</code> section,
+                    the color changes from indigo dark to a lighter indigo accent. To preserve this effect, make sure you include
+                    <code class="language-markup">class="animated-color"</code> in the icon's
+                    <code class="language-markup">&lt;i&gt;</code> tag.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="works-filters">
+                <h2>Works filters</h2>
+                <h4>Buttons</h4>
+                <p>
+                    The filter buttons are found inside <code class="language-markup">&lt;div class="filter-options"&gt;...&lt;/div&gt;</code>
+                    in <code>#works</code> section. To add a new button, just add a line like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;div class="filter-options"&gt;
+    &lt;a class="btn-flat waves-green-accent waves-effect active" id="all" data-group="all"&gt;Everything&lt;/a&gt;
+    ...
+    &lt;a class="btn-flat waves-green-accent waves-effect" data-group="new-filter"&gt;New filter&lt;/a&gt;
+&lt;/div&gt;</code>
+</pre>
+                <h4>Project categories</h4>
+                <p>
+                    To configure the work and associate it with a correct category, you will need to add a
+                    <code class="language-markup">data-groups</code> attribute. You can add multiple categories to a
+                    single project, like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;div id="shuffle-grid" class="row"&gt;
+    &lt;a href="path/to/project/ajax-page.html"
+       class="col s12 m6 l4 picture-item ajax-link"
+       data-groups='["category-1", "category-2"]'&gt;
+        &lt;img src="path/to/image.png" class="responsive-img" alt="Project"&gt;
+        &lt;h5&gt;Project name&lt;/h5&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code>
+</pre>
+                <p>
+                    The <code class="language-markup">data-groups</code> should follow a valid JSON format, which has
+                    the following syntax <code class="language-markup">["category-1", "category-2"]</code>. Note the double quotes.
+                    This forces you to have single quotes for the attribute, resulting in the following:
+                </p>
+<pre class="language-markup">
+<code>data-groups='["category-1", "category-2"]'</code>
+</pre>
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        The gallery is using <a href="http://vestride.github.io/Shuffle/">Shuffle</a>. You can learn more
+                        about this script on their homepage.
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="ajax-box">
+                <h2>Ajax box</h2>
+                <h4>Page structure</h4>
+                <p>
+                    Ajax boxes are useful for secondary pages, like single project pages or blog post pages.
+                    There can be any number of pages like this, for example Privacy Policy (link is placed in the footer).
+                </p>
+                <p>
+                    To create a page like that, place it in the <code>ajax/</code> directory. It's nice to keep things
+                    organized and create sub-directories, in case of multiple pages. The page should look like a block
+                    element, since we're injecting only this part. <span class="red-text">There is no need to do this</span>:
+                </p>
+<pre class="language-markup">
+<code>&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;...&lt;/head&gt;
+        &lt;body&gt;...&lt;/body&gt;
+    &lt;/html&gt;</code>
+</pre>
+                <h4>Close button</h4>
+                <p>
+                    Make sure you include a button to close the page and return to the main content. Just add the
+                    following code somewhere in the beginning of your ajax page.
+                </p>
+<pre class="language-markup">
+<code>&lt;a class="btn-floating btn-large waves-effect waves-dark green accent-2" id="close-ajax"&gt;
+    &lt;i class="mdi-navigation-close indigo-text text-darken-4"&gt;&lt;/i&gt;
+&lt;/a&gt;</code>
+</pre>
+                <h4>Parallax</h4>
+                <p>
+                    <code class="language-markup">&lt;div id="ajax-status"&gt;...&lt;/div&gt;</code> is required in case
+                    you're using the <a href="http://materializecss.com/parallax.html">parallax</a> effect in your ajax box.
+                </p>
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        Follow the page structure of existing pages for help.
+                    </p>
+                </div>
+                <h4>Link</h4>
+                <p>
+                    To enable this functionality, place a link with <code class="language-markup">href</code> pointing to
+                    the page, including <code class="language-markup">ajax-link</code> class. This is mandatory to treat
+                    the link not as a normal one. Your link should look like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;a href="ajax/sub-category/page.html" class="ajax-link"&gt;Ajax-box page&lt;/a&gt;</code>
+</pre>
+                <h4>Toast error message</h4>
+                <p>
+                    If, for some reason, the page is not accessible, be that a 404 error or something else, the user
+                    will get notified with a <a href="http://materializecss.com/dialogs.html">toast</a>, containing a message
+                    describing the error. This message is configurable in <code>scripts/config.js</code> under the
+                    <code class="language-javascript">somethingWrong</code> key:
+                </p>
+<pre class="language-javascript">
+<code>var Wata = {
+
+...
+
+// Various toast messages
+    toastMessages: {
+        ...
+        somethingWrong: 'Something went wrong, try again. Error: '
+    },
+
+...</code>
+</pre>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="currency-switcher">
+                <h2>Currency switcher</h2>
+                <h4>Radio buttons</h4>
+                <p>
+                    Currency switcher allows you to show prices in different currencies. In the <code>#prices</code> section
+                    you can find the following lines:
+                </p>
+<pre class="language-markup">
+<code>&lt;p class="right-align currency-switcher"&gt;
+    Choose your currency:
+    &lt;span class="currency-group"&gt;
+        &lt;input name="currency" type="radio" id="usd" checked&gt;
+        &lt;label for="usd"&gt;$&lt;/label&gt;
+    &lt;/span&gt;
+    &lt;span class="currency-group"&gt;
+        &lt;input name="currency" type="radio" id="eur"&gt;
+        &lt;label for="eur"&gt;€&lt;/label&gt;
+    &lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+                <p>
+                    To add another currency, add a
+                    <code class="language-markup">&lt;span class="currency-group"&gt;...&lt;/span&gt;</code>,
+                    modifying the <code class="language-markup">input</code> <code class="language-markup">id</code> and
+                    <code class="language-markup">label</code> <code class="language-markup">for</code> attributes, as well
+                    as changing the currency symbol. The default currency must have a
+                    <code class="language-markup">checked</code> attribute in the <code class="language-markup">input</code>
+                    tag.
+                </p>
+                <h4>Price container</h4>
+                <p>
+                    Price container shows customers the name of the offer, price and the list of items he or she gets for
+                    purchasing it. To correctly setup a new price container, make sure you insert a correct
+                    <code class="language-markup">id</code> and maintain the elements structure, including classes. A new
+                    price container would look like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;div class="price-container z-depth-1" id="exclusive"&gt;
+    &lt;div class="offer"&gt;Exclusive&lt;/div&gt;
+    &lt;div class="divider"&gt;&lt;/div&gt;
+    &lt;div class="price"&gt;$55&lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Feature 1&lt;/li&gt;
+        &lt;li&gt;Feature 2&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a class="waves-effect waves-dark white black-text btn"&gt;Choose&lt;/a&gt;
+&lt;/div&gt;</code>
+</pre>
+                <h4>Configuring prices</h4>
+                <p>
+                    To configure the prices, you need to open and edit the <code>scripts/config.js</code> file. Find the
+                    following lines:
+                </p>
+<pre class="language-javascript">
+<code>var Wata = {
+
+...
+
+// Currency switcher
+    currencySwitcher: {
+        offers: {
+            standard: {
+                usd: 19.0,
+                eur: 17.0
+            },
+            professional: {
+                usd: 49.0,
+                eur: 43.0
+            },
+            extended: {
+                usd: 99.0,
+                eur: 87.0
+            }
+        },
+        symbols: {
+            usd: '$',
+            eur: '€'
+        }
+    },
+
+...</code>
+</pre>
+                <p>After adding the prices configuration for our new "Exclusive" offer, the code will look like this:</p>
+<pre class="language-javascript">
+<code>var Wata = {
+
+...
+
+// Currency switcher
+    currencySwitcher: {
+        offers: {
+            standard: {
+                usd: 19.0,
+                eur: 17.0
+            },
+            professional: {
+                usd: 49.0,
+                eur: 43.0
+            },
+            extended: {
+                usd: 99.0,
+                eur: 87.0
+            },
+            exclusive: {
+                usd: 55.0,
+                eur: 49.0
+            }
+        },
+        symbols: {
+            usd: '$',
+            eur: '€'
+        }
+    },
+
+...</code>
+</pre>
+                <h4>Highlighting the best offer</h4>
+                <p>
+                    To make your best offer pop out, just add <code class="language-markup">best-offer</code> class to the
+                    <code class="language-markup">&lt;div class="price-container"&gt;...&lt;/div&gt;</code>. This will
+                    enable the mighty GreenSock animation to trigger a deeper shadow, when the offer appears in the viewport.
+                </p>
+
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        It's import to follow the existing syntax when configuring this variable. The number
+                        doesn't need any quotes &mdash; <code class="language-javascript">19.0</code>, while the string
+                        does &mdash; <code class="language-javascript">'$'</code>.
+                    </p>
+                    <p>
+                        Also, you shouldn't leave a trailing comma, that is the latest value of the group, such as
+                        <code class="language-javascript">eur</code> or <code class="language-javascript">extended</code> don't need a comma at the end.
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="subscribe-form">
+                <h2>Subscribe form</h2>
+                <p>
+                    Wata comes with a pre-configured, ajax-enabled <a href="http://mailchimp.com/">MailChimp</a> subscribe form.
+                    It can help you collect lists of subscribers, which you can use to send your newsletters to.
+                </p>
+                <p>
+                    To make it all work, follow these simple steps:
+                </p>
+                <ol>
+                    <li>Sign up at <a href="http://mailchimp.com/signup">MailChimp</a></li>
+                    <li>Create a list, filling in various required information</li>
+                    <li>Go to "Signup forms"</li>
+                    <li>Choose "Embedded forms"</li>
+                    <li>Choose "Super Slim" tab</li>
+                </ol>
+                <p>
+                    Now, all that is left is to go the <code>#subscribe</code> section and fill in the
+                    <code class="language-markup">form</code> <code class="language-markup">action</code>, as well as
+                    the hidden input name.
+                </p>
+                <h4>Form action</h4>
+                <p>
+                    From the "Copy/paste onto your site" text area find a line that looks like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;form action="//your-username.us11.list-manage.com/subscribe/post?u=4131d154e34d85ebd3ba25ad3&amp;id=61196261e7" ...&gt;</code>
+</pre>
+                <p>
+                    Copy and paste the whole <code class="language-markup">action="..."</code> part onto the form on your page:
+                </p>
+<pre class="language-markup">
+<code>&lt;!-- Begin MailChimp Signup Form --&gt;
+&lt;div id="mc_embed_signup"&gt;
+    &lt;form action="//your-username.us11.list-manage.com/subscribe/post?u=4131d154e34d85ebd3ba25ad3&amp;id=302b4221bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate&gt;</code>
+</pre>
+                <h4>Hidden input</h4>
+                <p>
+                    You're almost done! All that's left is preventing the spam attacks. We need to configure a hidden
+                    input field.
+                </p>
+                <p>
+                    Again, from the "Copy/paste onto your site" text area find a line that looks like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+&lt;div style="position: absolute; left: -5000px;"&gt;&lt;input type="text" name="b_4131d254e34d85ebd3ba25ad3_61196261e7" tabindex="-1" value=""&gt;&lt;/div&gt;</code>
+</pre>
+                <p>Copy and paste that long <code class="language-markup">name="..."</code> part onto your page:</p>
+<pre class="language-markup">
+<code>&lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+&lt;div class="cant-touch-this"&gt;
+    &lt;input type="text" name="b_4131d254e34d75ebd3ba25ad3_302b5221bd" tabindex="-1" value=""&gt;
+&lt;/div&gt;</code>
+</pre>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="blog-posts">
+                <h2>Blog posts</h2>
+                <h4>Blog card structure</h4>
+                <p>
+                    A blog card allows you to show an image, a title and an expandable content with a preview text.
+                    You can use the later to add a "Read the full story" link which leads to an ajax box with your blog post.
+                    The basic structure looks like this:
+                </p>
+<pre class="language-markup">
+<code>&lt;div class="card"&gt;
+    &lt;div class="card-image waves-effect waves-block waves-light"&gt;
+        &lt;img class="activator" src="images/blog/image.jpg" alt="Image alt"&gt;
+    &lt;/div&gt;
+    &lt;div class="card-content"&gt;
+        &lt;span class="card-title activator black-text"&gt;Blog post title &lt;i class="mdi-navigation-expand-less right"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="card-reveal"&gt;
+        &lt;span class="card-title black-text"&gt;Blog post title &lt;i class="mdi-navigation-expand-more right"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;p&gt;
+            A short text describing what this blog post is about. You can add various elements here,
+            but it's a good idea to keep it nice and short.
+        &lt;/p&gt;
+        &lt;p&gt;&lt;a href="ajax/blog-posts/blog-post.html" class="ajax-link"&gt;Read the full story&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="contact-form">
+                <h2>Contact form</h2>
+                <h4>Simple configuration</h4>
+                <p>
+                    Configuring your contact form is very simple. Just open the <code>php/config.php</code> file and
+                    edit the following lines.
+                </p>
+<pre class="language-php">
+<code>&lt;?php
+
+$me = array(
+    'email' => 'your@email.com',
+    'name' => 'Your Name'
+);</code>
+</pre>
+                <h4>SMTP configuration</h4>
+                <p>
+                    If you are familiar with SMTP technology, you can enable it in the same <code>php/config.php</code>
+                    file. Sending email with SMTP proves to be a little bit more reliable, so consider learning more about it.
+                </p>
+                <p>
+                    The following is an example using a Gmail account.
+                </p>
+<pre class="language-php">
+<code>$smtp = array(
+    'enabled' => true,
+    'host' => 'smtp.gmail.com',
+    'username' => 'your.account@gmail.com',
+    'password' => 'password',
+    'port' => 587,
+    'tls' => true
+);</code>
+</pre>
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        You can always ask your hosting provider about your SMTP settings.
+                    </p>
+                </div>
+
+                <h4>Required fields</h4>
+                <p>
+                    Required input fields must have a <code class="language-markup">class="required"</code> attached to them.
+                </p>
+
+                <h4>Toast messages</h4>
+                <p>
+                    Contact form is using <a href="http://materializecss.com/dialogs.html">toasts</a> to notify the user
+                    about various statuses of the form. For instance, if user inserts an invalid email address, the form
+                    will ask him or her to verify it. These messages can be configured in <code>scripts/config.js</code> file
+                    under the <code class="language-javascript">toastMessages</code> key:
+                </p>
+<pre class="language-javascript">
+<code>var Wata = {
+
+...
+
+    // Various toast messages
+    toastMessages: {
+        fillInRequiredFields: 'Please fill in the required fields',
+        enterValidEmail: 'Please enter a valid email address',
+        messageSent: "Your message has been sent. We'll get back to you soon.",
+        somethingWrong: 'Something went wrong, try again. Error: '
+    },
+
+...</code>
+</pre>
+                <div class="card-panel yellow lighten-3">
+                    <h5>Note</h5>
+                    <p>
+                        If your message contains an apostrophe or a single quote, make sure it's wrapped in double quotes,
+                        like the <code>messageSent</code> message. Otherwise, feel free to use single quotes.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="google-map">
+                <h2>Google map</h2>
+                <p>
+                    To show the point where your company is located, you need to go to
+                    <a href="https://www.google.com/maps/">Google maps</a> page and look for your location. After finding
+                    the desired point and zoom level, take a look at the url field. You will see something like this
+                </p>
+<pre class="language-markup">
+<code>https://www.google.com/maps/place/Los+Angeles,+CA,+USA/@34.0196096,-118.31719,16z/data=!4m2!3m1!1s0x80c2c75ddc27da13:0xe22fdf6f254608f4</code>
+</pre>
+                <p>
+                    Note the following part <code>@34.0196096,-118.31719,16z</code>. These are your:
+                </p>
+                <ul>
+                    <li>Latitude: 34.0196096</li>
+                    <li>Longitude: -118.31719</li>
+                    <li>Zoom level: 16z</li>
+                </ul>
+                <p>
+                    Now, open the <code>scripts/config.js</code> file, find the following lines towards the bottom
+                    of the script and substitute the values with yours:
+                </p>
+<pre class="language-javascript">
+<code>var Wata = {
+
+...
+
+    // Google map position and marker name
+    googleMaps: {
+        lat: 34.0549946,
+        lng: -118.2475384,
+        zoom: 16
+    }
+};</code>
+</pre>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="skype-link">
+                <h2>Skype link</h2>
+                <p>
+                    You can take advantage of Skype's buttons to ease your customer's way of reaching you.
+                    By simply adding the following code, you allow the user to open the skype app and start chatting
+                    with you right away.
+                </p>
+<pre class="language-markup">
+<code>&lt;a href="skype:username?chat"&gt;&lt;i class="fa fa-skype"&gt;&lt;/i&gt; Skype contact&lt;/a&gt;</code>
+</pre>
+                <p>
+                    If you want to allow a direct call, just change <code class="language-markup">?chat</code> to
+                    <code class="language-markup">?call</code>.
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="touch-icons">
+                <h2>Touch icons</h2>
+                <p>
+                    Touch icons are the icons of your web-site that are displayed on various mobile devices. For example,
+                    if someone wants to add your site to their home screen, they will view the icon you include. There are
+                    quite a few formats you need to handle, inculding iPhone, iPad, Android devices and Microsoft devices.
+                    To help you with this process, you can use a touch icons generator web-site, for example
+                    <a href="http://realfavicongenerator.net/">realfavicongenerator.net</a>.
+                </p>
+                <p>
+                    After you're done generating your icons, leave the <code>favicon.ico</code> in your root directory and
+                    place everything else in <code>favicons/</code> directory. Make sure the
+                    <code class="language-markup">href</code> paths are correct, for example:
+                </p>
+<pre class="language-markup">
+<code>&lt;link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png"&gt;</code>
+</pre>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section scrollspy" id="credits">
+                <h2>Credits</h2>
+                <p>
+                    Huge thanks to all the awesome people who create and share their beautiful works.
+                </p>
+                <h4>Technology</h4>
+                <ul>
+                    <li><a href="https://github.com/scdoshi/jquery-ajaxchimp">github.com/scdoshi/jquery-ajaxchimp</a></li>
+                    <li><a href="http://bourbon.io/">bourbon.io</a></li>
+                    <li><a href="http://fortawesome.github.io/Font-Awesome/">fortawesome.github.io/Font-Awesome</a></li>
+                    <li><a href="http://jquery.com/">jquery.com</a></li>
+                    <li><a href="http://masonry.desandro.com/">masonry.desandro.com</a></li>
+                    <li><a href="http://materializecss.com/">materializecss.com</a></li>
+                    <li><a href="https://github.com/PHPMailer/PHPMailer">github.com/PHPMailer/PHPMailer</a></li>
+                    <li><a href="http://scrollmagic.io/">scrollmagic.io</a></li>
+                    <li><a href="http://vestride.github.io/Shuffle/">vestride.github.io/Shuffle</a></li>
+                    <li><a href="https://github.com/msurguy/triangles">github.com/msurguy/triangles</a></li>
+                    <li><a href="https://developers.google.com/maps/">developers.google.com/maps</a></li>
+                    <li><a href="http://mailchimp.com/">mailchimp.com</a></li>
+                    <li><a href="http://sass-lang.com/">sass-lang.com</a></li>
+                    <li><a href="http://prismjs.com/">prismjs.com</a></li>
+                    <li><a href="http://gruntjs.com/">gruntjs.com</a></li>
+                </ul>
+
+                <h4>Images</h4>
+                <h5>Flickr</h5>
+                <ul>
+                    <li><a href="https://www.flickr.com/photos/unten44/9631706311/">flickr.com/photos/unten44/9631706311</a></li>
+                    <li><a href="https://www.flickr.com/photos/foundanimalsfoundation/8557105873/">flickr.com/photos/foundanimalsfoundation/8557105873</a></li>
+                    <li><a href="https://www.flickr.com/photos/foundanimalsfoundation/8558214840/">flickr.com/photos/foundanimalsfoundation/8558214840</a></li>
+                    <li><a href="https://www.flickr.com/photos/plushev/3572739854/">flickr.com/photos/plushev/3572739854</a></li>
+                    <li><a href="https://www.flickr.com/photos/aaronbrothers/6807416949/">flickr.com/photos/aaronbrothers/6807416949</a></li>
+                    <li><a href="https://www.flickr.com/photos/designmilk/14100849217/">flickr.com/photos/designmilk/14100849217</a></li>
+                    <li><a href="https://www.flickr.com/photos/sparkfun/11715790146/">flickr.com/photos/sparkfun/11715790146</a></li>
+                    <li><a href="https://www.flickr.com/photos/58842866@N08/5388054707/">flickr.com/photos/58842866@N08/5388054707</a></li>
+                    <li><a href="https://www.flickr.com/photos/58842866@N08/5388053335/">flickr.com/photos/58842866@N08/5388053335</a></li>
+                    <li><a href="https://www.flickr.com/photos/archer10/14841032974">flickr.com/photos/archer10/14841032974</a></li>
+                </ul>
+                <h5>Other</h5>
+                <ul>
+                    <li><a href="http://gratisography.com/">gratisography.com</a></li>
+                    <li><a href="http://pexels.com/">pexels.com</a></li>
+                    <li><a href="https://unsplash.com/">unsplash.com</a></li>
+                    <li><a href="http://graphicburger.com/">graphicburger.com</a></li>
+                </ul>
+
+                <h4>Videos</h4>
+                <ul>
+                    <li><a href="https://vimeo.com/channels/freestockfootage/30673387">vimeo.com/channels/freestockfootage/30673387</a></li>
+                    <li><a href="https://vimeo.com/channels/freestockfootage/108824940">vimeo.com/channels/freestockfootage/108824940</a></li>
+                </ul>
+
+                <h4>Font</h4>
+                <a href="https://www.google.com/fonts/specimen/Roboto">Roboto</a>
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="../libs/jquery/jquery-2.1.1.min.js"></script>
+<script src="../libs/materialize/js/materialize.min.js"></script>
+<script src="libs/prism/prism.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.scrollspy').scrollSpy();
+    });
+</script>
+</body>
+</html>

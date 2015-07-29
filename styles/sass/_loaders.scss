@@ -1,0 +1,38 @@
+#preloader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+
+    .preloader-wrapper {
+        margin: 0 auto;
+
+        .spinner-blue-only.actually-black {
+            border-color: $black;
+        }
+    }
+}
+
+#status {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+}
+
+#ajax-status {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -32px;
+}
+
+#ajax-status,
+#status {
+    .spinner-blue-only.actually-green {
+        border-color: $secondary-color;
+    }
+}

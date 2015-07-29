@@ -1,0 +1,28 @@
+address {
+    font-style: normal;
+    margin: 1em 0;
+}
+
+.map {
+    margin-top: 5rem;
+}
+
+#map-canvas {
+    height: 550px;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    .col:hover .divider {
+        background-color: $primary-color;
+    }
+
+    .col .divider {
+        @include transition(background-color .3s ease);
+    }
+
+    h5 {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}

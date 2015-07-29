@@ -1,0 +1,57 @@
+nav {
+    background-color: rgba(255, 255, 255, .95);
+
+    .brand-logo,
+    ul a {
+        color: $black;
+        padding: 0 15px;
+    }
+
+    .brand-logo {
+        font-weight: 400;
+        letter-spacing: -2px;
+
+        .tighter {
+            letter-spacing: -3px;
+        }
+    }
+
+    .side-nav {
+        background-color: rgba(255, 255, 255, .95);
+    }
+
+    .mdi-navigation-menu,
+    .side-nav a {
+        color: $primary-color;
+        font-size: 2rem;
+    }
+
+    .table-of-contents {
+        li {
+            padding: 0;
+            height: 64px;
+        }
+
+        a {
+            display: block;
+            height: 64px;
+            line-height: 64px;
+            font-weight: normal;
+            color: $black;
+            border: none;
+
+            &.active,
+            &:hover {
+                color: $black;
+                border: none;
+                padding-left: 20px;
+            }
+
+            &.active {
+                font-weight: normal;
+                background-color: $light-gray;
+                border-bottom: 4px solid $secondary-color;
+            }
+        }
+    }
+}

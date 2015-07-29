@@ -1,0 +1,68 @@
+.currency-switcher {
+    [type="radio"]:not(:checked)+label,
+    [type="radio"]:checked+label {
+        padding-left: 25px;
+    }
+
+    [type="radio"]:checked+label:after {
+        border: 2px solid $secondary-color;
+        background-color: $secondary-color;
+    }
+
+    label {
+        margin-right: .25rem;
+        color: $black;
+    }
+}
+
+.price-container {
+    padding: 4rem 0;
+    text-align: center;
+    @include transition(all .5s ease-out);
+    border-radius: .1px;
+
+    @media #{$small-and-down} {
+        margin-bottom: 2rem;
+    }
+
+    .offer {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 3px;
+
+        @media #{$medium-only} {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        &.best-value {
+            font-weight: 600;
+        }
+    }
+
+    .divider {
+        margin: 15px 0;
+        @include transition(background-color .3s ease);
+    }
+
+    &:hover {
+        .divider {
+            background-color: $primary-color;
+        }
+    }
+
+    .price {
+        font-size: 64px;
+        font-weight: 200;
+    }
+
+    ul {
+        margin-bottom: 3rem;
+
+        li {
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+}

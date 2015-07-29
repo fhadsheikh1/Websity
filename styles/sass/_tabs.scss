@@ -1,0 +1,22 @@
+.tabs {
+    .tab {
+        text-transform: none;
+        letter-spacing: normal;
+
+        a {
+            color: $primary-color;
+
+            &:hover {
+                color: lighten($primary-color, 20%);;
+            }
+        }
+    }
+
+    .indicator {
+        background-color: $secondary-color;
+    }
+}
+
+.tab-contents {
+    margin: 2rem 0;
+}

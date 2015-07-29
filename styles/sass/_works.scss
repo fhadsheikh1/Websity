@@ -1,0 +1,35 @@
+.filter-options {
+    text-align: center;
+    padding-top: 30px;
+
+    a {
+        color: $primary-color;
+        @include transition(background-color .2s linear .3s);
+
+        &.active {
+            background-color: $secondary-color;
+        }
+
+        @media #{$small-and-down} {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.picture-item {
+    margin-bottom: 1rem;
+    top: 100px !important;
+    opacity: 0 !important;
+    @include transition(all 250ms $ease-out-circ !important);
+
+    &.animate {
+        top: 0 !important;
+        opacity: 1 !important;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+}
