@@ -39,10 +39,10 @@ $mail->addAddress($me['email']);
 $template = file_get_contents('mail.template.html');
 $parsed_template = sprintf($template, $form_data['message'], $form_data['fullname'], $form_data['email'], $form_data['email']);
 
-$mail->Subject = 'Wata contact form message';
+$mail->Subject = 'Websity contact form message';
 $mail->Body = $parsed_template;
 
-$mail->AltBody = $form_data['fullname'] . " (" . $form_data['email'] . ") used the Wata contact form to send you this message: " . $form_data['message'];
+$mail->AltBody = $form_data['fullname'] . " (" . $form_data['email'] . ") used the Websity contact form to send you this message: " . $form_data['message'];
 
 if ( ! $mail->send())
 {
